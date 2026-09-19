@@ -13,6 +13,7 @@ import pandas as pd
 from src.config import (
     ATTACK_ALIASES,
     BENIGN_LABEL,
+    DATA_DIR,
     DATASET_FILENAME,
     DATASET_PATH,
     FEATURE_ALIASES,

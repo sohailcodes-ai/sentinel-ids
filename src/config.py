@@ -12,7 +12,7 @@ MODELS_DIR = PROJECT_ROOT / "models"
 OUTPUTS_DIR = PROJECT_ROOT / "outputs"
 EXPERIMENTS_DIR = PROJECT_ROOT / "experiments"
 
-DATASET_FILENAME = "Friday-WorkingHours-.pcap_ISCX.csv"
+DATASET_FILENAME = "Friday-WorkingHours-Morning.pcap_ISCX.csv"
 DATASET_PATH = DATA_DIR / DATASET_FILENAME
 
 LABEL_COLUMN = "Label"

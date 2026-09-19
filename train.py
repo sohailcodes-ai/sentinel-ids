@@ -25,8 +25,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from src.config import (
     ABLATION_CONFIGS, DEFAULT_RANDOM_STATE, DEFAULT_SAMPLE_SIZE,
-    MODELS_DIR, OUTPUTS_DIR, SELECTED_FEATURES, ORIGINAL_LABEL_COLUMN,
-    LABEL_COLUMN,
+    MODELS_DIR, OUTPUTS_DIR, EXPERIMENTS_DIR, SELECTED_FEATURES,
+    ORIGINAL_LABEL_COLUMN, LABEL_COLUMN,
 )
 from src.data import load_and_validate, sample_stratified, normalize_multiclass_label
 from src.evaluation import (

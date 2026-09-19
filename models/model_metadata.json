@@ -1,0 +1,274 @@
+{
+  "experiment_id": "EXP-2026-09-19-040740",
+  "timestamp": "2026-09-19T04:10:23Z",
+  "dataset": "C:\\Users\\SOHAIL\\Desktop\\sentinal\\sentinel-ids\\data\\Friday-WorkingHours-Morning.pcap_ISCX.csv",
+  "dataset_hash": "53a41c24d570ea83",
+  "random_state": 42,
+  "sample_size": 20000,
+  "features": [
+    "Flow Duration",
+    "Total Fwd Packets",
+    "Total Backward Packets",
+    "Total Length of Fwd Packets",
+    "Total Length of Bwd Packets",
+    "Fwd Packet Length Mean",
+    "Bwd Packet Length Mean",
+    "Flow Bytes/s",
+    "Flow Packets/s",
+    "Packet Length Mean",
+    "Packet Length Std",
+    "FIN Flag Count",
+    "SYN Flag Count",
+    "RST Flag Count",
+    "ACK Flag Count"
+  ],
+  "label_mapping": {
+    "BENIGN": 0,
+    "ATTACK": 1
+  },
+  "train_size": 16000,
+  "test_size": 4000,
+  "best_model": "RBF SVM (best)",
+  "linear_results": {
+    "model": "Linear SVM",
+    "kernel": "linear",
+    "C": 1.0,
+    "gamma": "N/A",
+    "train_time": 3.648,
+    "accuracy": 0.9758,
+    "precision": 0.2672,
+    "recall": 0.9722,
+    "f1": 0.4192
+  },
+  "rbf_results": {
+    "model": "RBF SVM (best)",
+    "kernel": "rbf",
+    "C": 10.0,
+    "gamma": 0.1,
+    "train_time": 82.9767,
+    "accuracy": 0.9762,
+    "precision": 0.2748,
+    "recall": 1.0,
+    "f1": 0.4311
+  },
+  "rbf_search": [
+    {
+      "kernel": "rbf",
+      "C": 0.1,
+      "gamma": "scale",
+      "cv_f1_mean": 0.1318,
+      "cv_f1_std": 0.0279
+    },
+    {
+      "kernel": "rbf",
+      "C": 0.1,
+      "gamma": "0.01",
+      "cv_f1_mean": 0.0389,
+      "cv_f1_std": 0.0011
+    },
+    {
+      "kernel": "rbf",
+      "C": 0.1,
+      "gamma": "0.1",
+      "cv_f1_mean": 0.1911,
+      "cv_f1_std": 0.0081
+    },
+    {
+      "kernel": "rbf",
+      "C": 1.0,
+      "gamma": "scale",
+      "cv_f1_mean": 0.2246,
+      "cv_f1_std": 0.0086
+    },
+    {
+      "kernel": "rbf",
+      "C": 1.0,
+      "gamma": "0.01",
+      "cv_f1_mean": 0.1453,
+      "cv_f1_std": 0.032
+    },
+    {
+      "kernel": "rbf",
+      "C": 1.0,
+      "gamma": "0.1",
+      "cv_f1_mean": 0.2326,
+      "cv_f1_std": 0.0079
+    },
+    {
+      "kernel": "rbf",
+      "C": 10.0,
+      "gamma": "scale",
+      "cv_f1_mean": 0.4512,
+      "cv_f1_std": 0.024
+    },
+    {
+      "kernel": "rbf",
+      "C": 10.0,
+      "gamma": "0.01",
+      "cv_f1_mean": 0.2343,
+      "cv_f1_std": 0.0042
+    },
+    {
+      "kernel": "rbf",
+      "C": 10.0,
+      "gamma": "0.1",
+      "cv_f1_mean": 0.4753,
+      "cv_f1_std": 0.0286
+    }
+  ],
+  "metrics": {
+    "accuracy": 0.9762,
+    "precision": 0.2748,
+    "recall": 1.0,
+    "f1": 0.4311,
+    "true_positives": 36,
+    "true_negatives": 3869,
+    "false_positives": 95,
+    "false_negatives": 0,
+    "confusion_matrix": [
+      [
+        3869,
+        95
+      ],
+      [
+        0,
+        36
+      ]
+    ],
+    "labels": [
+      "0",
+      "1"
+    ],
+    "classification_report_dict": {
+      "BENIGN": {
+        "precision": 1.0,
+        "recall": 0.9760343087790111,
+        "f1-score": 0.9878718243329503,
+        "support": 3964.0
+      },
+      "ATTACK": {
+        "precision": 0.2748091603053435,
+        "recall": 1.0,
+        "f1-score": 0.4311377245508982,
+        "support": 36.0
+      },
+      "accuracy": 0.97625,
+      "macro avg": {
+        "precision": 0.6374045801526718,
+        "recall": 0.9880171543895055,
+        "f1-score": 0.7095047744419243,
+        "support": 4000.0
+      },
+      "weighted avg": {
+        "precision": 0.9934732824427481,
+        "recall": 0.97625,
+        "f1-score": 0.9828612174349118,
+        "support": 4000.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\n      BENIGN       1.00      0.98      0.99      3964\n      ATTACK       0.27      1.00      0.43        36\n\n    accuracy                           0.98      4000\n   macro avg       0.64      0.99      0.71      4000\nweighted avg       0.99      0.98      0.98      4000\n"
+  },
+  "model_info": {
+    "type": "SVM",
+    "kernel": "rbf",
+    "C": 10.0,
+    "n_support_vectors": 994,
+    "support_vectors_per_class": {
+      "0": 975,
+      "1": 19
+    },
+    "n_features": 15,
+    "gamma": 0.1
+  },
+  "environment": {
+    "python": "3.13.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.6",
+    "numpy": "2.2.6",
+    "streamlit": "not installed",
+    "fastapi": "0.136.3"
+  },
+  "validation_report": {
+    "dataset_path": "C:\\Users\\SOHAIL\\Desktop\\sentinal\\sentinel-ids\\data\\Friday-WorkingHours-Morning.pcap_ISCX.csv",
+    "dataset_hash": "53a41c24d570ea83",
+    "raw_rows": 191033,
+    "cleaned_rows": 145343,
+    "removed_rows": 45690,
+    "duplicates_removed": 45673,
+    "inf_replaced": 32,
+    "nan_rows_dropped": 17,
+    "features_requested": [
+      "Flow Duration",
+      "Total Fwd Packets",
+      "Total Backward Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Mean",
+      "Bwd Packet Length Mean",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Packet Length Mean",
+      "Packet Length Std",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "ACK Flag Count"
+    ],
+    "features_resolved": [
+      "Flow Duration",
+      "Total Fwd Packets",
+      "Total Backward Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Mean",
+      "Bwd Packet Length Mean",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Packet Length Mean",
+      "Packet Length Std",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "ACK Flag Count"
+    ],
+    "features_missing": [],
+    "num_features": 15,
+    "class_distribution": {
+      "BENIGN": 144019,
+      "ATTACK": 1324
+    },
+    "class_percentages": {
+      "BENIGN": 99.09,
+      "ATTACK": 0.91
+    },
+    "imbalance_ratio": 108.78,
+    "original_class_distribution": {
+      "BENIGN": 144019,
+      "Bot": 1324
+    },
+    "columns": [
+      "Flow Duration",
+      "Total Fwd Packets",
+      "Total Backward Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Mean",
+      "Bwd Packet Length Mean",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Packet Length Mean",
+      "Packet Length Std",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "ACK Flag Count",
+      "Label",
+      "Original_Label"
+    ]
+  },
+  "benchmark_requested": true,
+  "multiclass_requested": true,
+  "ablation_requested": true
+}

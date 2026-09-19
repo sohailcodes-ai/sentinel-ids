@@ -39,6 +39,8 @@ experiments/EXP-*/
 data/*.csv
 data/*.pcap
 data/*.pcap.gz
+data/*.zip
+data/extracted/
 
 # Jupyter
 .ipynb_checkpoints/
